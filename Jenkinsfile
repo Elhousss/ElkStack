@@ -8,14 +8,14 @@ node('slave') {
     sh "echo ${commitid} > ${workspacePath}/expectedCommitid.txt"
  }
 }
-node('slave') {
-    def elk 
- stage ('Build image'){
+//node('slave') {
+   def elk = "${workspacePath}"
+ //stage ('Build image'){
     /* This builds the actual image; synonymous to
      * docker build on the command line */
 
-     elk = docker.build("elhousss/elkstack")
- }
+   //  elk = docker.build("elhousss/elkstack")
+ //}
  
  stage ('Push image'){
      /* we'll push the image with two tags:
