@@ -7,10 +7,11 @@ node('slave') {
     def workspacePath = pwd()
     sh "echo ${commitid} > ${workspacePath}/expectedCommitid.txt"*/
  }
-}
- 
- /*stage ('Run Application') {
-      // Run application using Docker image
-      sh "docker run -d -p 8090:8090 -v /tmp:/tmp --name image-app elhousss/spring-boot-slf4j"
- }*/
 
+ 
+ stage ('Run Application') {
+      // Run application using Docker image
+      sh "sudo docker-compose up -d"
+ }
+
+}
