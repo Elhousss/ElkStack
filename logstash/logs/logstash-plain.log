@@ -1,0 +1,122 @@
+[2017-04-12T09:33:31,552][INFO ][logstash.setting.writabledirectory] Creating directory {:setting=>"path.queue", :path=>"/usr/share/logstash/data/queue"}
+[2017-04-12T09:33:31,583][INFO ][logstash.agent           ] No persistent UUID file found. Generating new UUID {:uuid=>"9c321332-6b17-4de3-8700-9307135ec01b", :path=>"/usr/share/logstash/data/uuid"}
+[2017-04-12T09:33:32,346][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://elasticsearch:9200/]}}
+[2017-04-12T09:33:32,349][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://elasticsearch:9200/, :path=>"/"}
+[2017-04-12T09:33:32,437][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>#<URI::HTTP:0x2bec56db URL:http://elasticsearch:9200/>}
+[2017-04-12T09:33:32,438][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2017-04-12T09:33:32,527][INFO ][logstash.outputs.elasticsearch] Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>50001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"_all"=>{"enabled"=>true, "norms"=>false}, "dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword"}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date", "include_in_all"=>false}, "@version"=>{"type"=>"keyword", "include_in_all"=>false}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[2017-04-12T09:33:32,539][INFO ][logstash.outputs.elasticsearch] Installing elasticsearch template to _template/logstash
+[2017-04-12T09:33:32,962][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>[#<URI::Generic:0x222193e5 URL://elasticsearch:9200>]}
+[2017-04-12T09:33:33,061][INFO ][logstash.filters.geoip   ] Using geoip database {:path=>"/usr/share/logstash/vendor/bundle/jruby/1.9/gems/logstash-filter-geoip-4.0.4-java/vendor/GeoLite2-City.mmdb"}
+[2017-04-12T09:33:33,085][INFO ][logstash.pipeline        ] Starting pipeline {"id"=>"main", "pipeline.workers"=>2, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>250}
+[2017-04-12T09:33:33,118][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:5000"}
+[2017-04-12T09:33:33,123][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:6000"}
+[2017-04-12T09:33:33,132][INFO ][logstash.pipeline        ] Pipeline main started
+[2017-04-12T09:33:33,191][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-04-12T09:35:55,948][WARN ][logstash.runner          ] SIGTERM received. Shutting down the agent.
+[2017-04-12T09:35:55,954][WARN ][logstash.agent           ] stopping pipeline {:id=>"main"}
+[2017-04-12T09:36:15,228][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://elasticsearch:9200/]}}
+[2017-04-12T09:36:15,239][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://elasticsearch:9200/, :path=>"/"}
+[2017-04-12T09:36:15,434][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>#<URI::HTTP:0x5a14fe1f URL:http://elasticsearch:9200/>}
+[2017-04-12T09:36:15,439][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2017-04-12T09:36:15,545][INFO ][logstash.outputs.elasticsearch] Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>50001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"_all"=>{"enabled"=>true, "norms"=>false}, "dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword"}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date", "include_in_all"=>false}, "@version"=>{"type"=>"keyword", "include_in_all"=>false}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[2017-04-12T09:36:15,564][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>[#<URI::Generic:0x63d3df83 URL://elasticsearch:9200>]}
+[2017-04-12T09:36:15,684][INFO ][logstash.filters.geoip   ] Using geoip database {:path=>"/usr/share/logstash/vendor/bundle/jruby/1.9/gems/logstash-filter-geoip-4.0.4-java/vendor/GeoLite2-City.mmdb"}
+[2017-04-12T09:36:15,726][INFO ][logstash.pipeline        ] Starting pipeline {"id"=>"main", "pipeline.workers"=>2, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>250}
+[2017-04-12T09:36:15,743][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:5000"}
+[2017-04-12T09:36:15,765][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:6000"}
+[2017-04-12T09:36:15,781][INFO ][logstash.pipeline        ] Pipeline main started
+[2017-04-12T09:36:15,841][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-04-12T09:47:38,723][WARN ][logstash.runner          ] SIGTERM received. Shutting down the agent.
+[2017-04-12T09:47:38,736][WARN ][logstash.agent           ] stopping pipeline {:id=>"main"}
+[2017-04-12T09:47:57,660][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://elasticsearch:9200/]}}
+[2017-04-12T09:47:57,668][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://elasticsearch:9200/, :path=>"/"}
+[2017-04-12T09:47:57,838][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>#<URI::HTTP:0x36c50606 URL:http://elasticsearch:9200/>}
+[2017-04-12T09:47:57,840][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2017-04-12T09:47:57,922][INFO ][logstash.outputs.elasticsearch] Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>50001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"_all"=>{"enabled"=>true, "norms"=>false}, "dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword"}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date", "include_in_all"=>false}, "@version"=>{"type"=>"keyword", "include_in_all"=>false}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[2017-04-12T09:47:57,940][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>[#<URI::Generic:0x5b47734f URL://elasticsearch:9200>]}
+[2017-04-12T09:47:58,061][INFO ][logstash.filters.geoip   ] Using geoip database {:path=>"/usr/share/logstash/vendor/bundle/jruby/1.9/gems/logstash-filter-geoip-4.0.4-java/vendor/GeoLite2-City.mmdb"}
+[2017-04-12T09:47:58,105][INFO ][logstash.pipeline        ] Starting pipeline {"id"=>"main", "pipeline.workers"=>2, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>250}
+[2017-04-12T09:47:58,128][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:5000"}
+[2017-04-12T09:47:58,134][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:6000"}
+[2017-04-12T09:47:58,138][INFO ][logstash.pipeline        ] Pipeline main started
+[2017-04-12T09:47:58,177][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-04-12T10:21:14,854][WARN ][logstash.runner          ] SIGTERM received. Shutting down the agent.
+[2017-04-12T10:21:14,860][WARN ][logstash.agent           ] stopping pipeline {:id=>"main"}
+[2017-04-12T10:22:08,406][INFO ][logstash.setting.writabledirectory] Creating directory {:setting=>"path.queue", :path=>"/usr/share/logstash/data/queue"}
+[2017-04-12T10:22:08,444][INFO ][logstash.agent           ] No persistent UUID file found. Generating new UUID {:uuid=>"b904c0ea-e6ae-40a8-9a42-ebeeb20a83aa", :path=>"/usr/share/logstash/data/uuid"}
+[2017-04-12T10:22:09,642][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://elasticsearch:9200/]}}
+[2017-04-12T10:22:09,645][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://elasticsearch:9200/, :path=>"/"}
+[2017-04-12T10:22:09,791][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>#<URI::HTTP:0x40e29002 URL:http://elasticsearch:9200/>}
+[2017-04-12T10:22:09,792][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2017-04-12T10:22:09,882][INFO ][logstash.outputs.elasticsearch] Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>50001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"_all"=>{"enabled"=>true, "norms"=>false}, "dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword"}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date", "include_in_all"=>false}, "@version"=>{"type"=>"keyword", "include_in_all"=>false}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[2017-04-12T10:22:09,900][INFO ][logstash.outputs.elasticsearch] Installing elasticsearch template to _template/logstash
+[2017-04-12T10:22:10,121][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>[#<URI::Generic:0x27c7250b URL://elasticsearch:9200>]}
+[2017-04-12T10:22:10,242][INFO ][logstash.filters.geoip   ] Using geoip database {:path=>"/usr/share/logstash/vendor/bundle/jruby/1.9/gems/logstash-filter-geoip-4.0.4-java/vendor/GeoLite2-City.mmdb"}
+[2017-04-12T10:22:10,266][INFO ][logstash.pipeline        ] Starting pipeline {"id"=>"main", "pipeline.workers"=>2, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>250}
+[2017-04-12T10:22:10,282][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:5000"}
+[2017-04-12T10:22:10,294][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:6000"}
+[2017-04-12T10:22:10,313][INFO ][logstash.pipeline        ] Pipeline main started
+[2017-04-12T10:22:10,372][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-04-12T10:29:31,521][WARN ][logstash.runner          ] SIGTERM received. Shutting down the agent.
+[2017-04-12T10:29:31,525][WARN ][logstash.agent           ] stopping pipeline {:id=>"main"}
+[2017-04-12T10:30:27,589][INFO ][logstash.setting.writabledirectory] Creating directory {:setting=>"path.queue", :path=>"/usr/share/logstash/data/queue"}
+[2017-04-12T10:30:27,625][INFO ][logstash.agent           ] No persistent UUID file found. Generating new UUID {:uuid=>"43af456d-dd14-4b0a-953b-64299567e924", :path=>"/usr/share/logstash/data/uuid"}
+[2017-04-12T10:30:28,664][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://elasticsearch:9200/]}}
+[2017-04-12T10:30:28,666][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://elasticsearch:9200/, :path=>"/"}
+[2017-04-12T10:30:28,775][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>#<URI::HTTP:0x711f1688 URL:http://elasticsearch:9200/>}
+[2017-04-12T10:30:28,777][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2017-04-12T10:30:28,874][INFO ][logstash.outputs.elasticsearch] Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>50001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"_all"=>{"enabled"=>true, "norms"=>false}, "dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword"}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date", "include_in_all"=>false}, "@version"=>{"type"=>"keyword", "include_in_all"=>false}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[2017-04-12T10:30:28,901][INFO ][logstash.outputs.elasticsearch] Installing elasticsearch template to _template/logstash
+[2017-04-12T10:30:29,279][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>[#<URI::Generic:0x15c44248 URL://elasticsearch:9200>]}
+[2017-04-12T10:30:29,393][INFO ][logstash.filters.geoip   ] Using geoip database {:path=>"/usr/share/logstash/vendor/bundle/jruby/1.9/gems/logstash-filter-geoip-4.0.4-java/vendor/GeoLite2-City.mmdb"}
+[2017-04-12T10:30:29,420][INFO ][logstash.pipeline        ] Starting pipeline {"id"=>"main", "pipeline.workers"=>2, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>250}
+[2017-04-12T10:30:29,446][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:5000"}
+[2017-04-12T10:30:29,456][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:6000"}
+[2017-04-12T10:30:29,470][INFO ][logstash.pipeline        ] Pipeline main started
+[2017-04-12T10:30:29,532][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-04-12T10:34:21,236][WARN ][logstash.runner          ] SIGTERM received. Shutting down the agent.
+[2017-04-12T10:34:21,247][WARN ][logstash.agent           ] stopping pipeline {:id=>"main"}
+[2017-04-12T10:34:41,632][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://elasticsearch:9200/]}}
+[2017-04-12T10:34:41,639][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://elasticsearch:9200/, :path=>"/"}
+[2017-04-12T10:34:41,806][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>#<URI::HTTP:0x42270a3b URL:http://elasticsearch:9200/>}
+[2017-04-12T10:34:41,809][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2017-04-12T10:34:41,903][INFO ][logstash.outputs.elasticsearch] Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>50001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"_all"=>{"enabled"=>true, "norms"=>false}, "dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword"}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date", "include_in_all"=>false}, "@version"=>{"type"=>"keyword", "include_in_all"=>false}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[2017-04-12T10:34:41,916][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>[#<URI::Generic:0x5b363324 URL://elasticsearch:9200>]}
+[2017-04-12T10:34:41,984][INFO ][logstash.filters.geoip   ] Using geoip database {:path=>"/usr/share/logstash/vendor/bundle/jruby/1.9/gems/logstash-filter-geoip-4.0.4-java/vendor/GeoLite2-City.mmdb"}
+[2017-04-12T10:34:42,007][INFO ][logstash.pipeline        ] Starting pipeline {"id"=>"main", "pipeline.workers"=>2, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>250}
+[2017-04-12T10:34:42,022][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:5000"}
+[2017-04-12T10:34:42,032][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:6000"}
+[2017-04-12T10:34:42,043][INFO ][logstash.pipeline        ] Pipeline main started
+[2017-04-12T10:34:42,081][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-04-12T10:40:19,672][WARN ][logstash.runner          ] SIGTERM received. Shutting down the agent.
+[2017-04-12T10:40:19,690][WARN ][logstash.agent           ] stopping pipeline {:id=>"main"}
+[2017-04-12T10:40:38,621][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://elasticsearch:9200/]}}
+[2017-04-12T10:40:38,630][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://elasticsearch:9200/, :path=>"/"}
+[2017-04-12T10:40:38,790][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>#<URI::HTTP:0xf1cae67 URL:http://elasticsearch:9200/>}
+[2017-04-12T10:40:38,792][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2017-04-12T10:40:38,857][INFO ][logstash.outputs.elasticsearch] Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>50001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"_all"=>{"enabled"=>true, "norms"=>false}, "dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword"}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date", "include_in_all"=>false}, "@version"=>{"type"=>"keyword", "include_in_all"=>false}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[2017-04-12T10:40:38,869][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>[#<URI::Generic:0x760c3e5d URL://elasticsearch:9200>]}
+[2017-04-12T10:40:38,932][INFO ][logstash.filters.geoip   ] Using geoip database {:path=>"/usr/share/logstash/vendor/bundle/jruby/1.9/gems/logstash-filter-geoip-4.0.4-java/vendor/GeoLite2-City.mmdb"}
+[2017-04-12T10:40:38,954][INFO ][logstash.pipeline        ] Starting pipeline {"id"=>"main", "pipeline.workers"=>2, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>250}
+[2017-04-12T10:40:38,965][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:5000"}
+[2017-04-12T10:40:38,971][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:6000"}
+[2017-04-12T10:40:38,977][INFO ][logstash.pipeline        ] Pipeline main started
+[2017-04-12T10:40:39,006][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2017-04-12T11:10:12,966][WARN ][logstash.runner          ] SIGTERM received. Shutting down the agent.
+[2017-04-12T11:10:12,980][WARN ][logstash.agent           ] stopping pipeline {:id=>"main"}
+[2017-04-12T11:10:59,318][INFO ][logstash.setting.writabledirectory] Creating directory {:setting=>"path.queue", :path=>"/usr/share/logstash/data/queue"}
+[2017-04-12T11:10:59,351][INFO ][logstash.agent           ] No persistent UUID file found. Generating new UUID {:uuid=>"d154c2a4-3e7e-4e02-858f-8540a26f9d47", :path=>"/usr/share/logstash/data/uuid"}
+[2017-04-12T11:11:00,262][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://elasticsearch:9200/]}}
+[2017-04-12T11:11:00,282][INFO ][logstash.outputs.elasticsearch] Running health check to see if an Elasticsearch connection is working {:healthcheck_url=>http://elasticsearch:9200/, :path=>"/"}
+[2017-04-12T11:11:00,510][WARN ][logstash.outputs.elasticsearch] Restored connection to ES instance {:url=>#<URI::HTTP:0x2e185fbf URL:http://elasticsearch:9200/>}
+[2017-04-12T11:11:00,529][INFO ][logstash.outputs.elasticsearch] Using mapping template from {:path=>nil}
+[2017-04-12T11:11:00,658][INFO ][logstash.outputs.elasticsearch] Attempting to install template {:manage_template=>{"template"=>"logstash-*", "version"=>50001, "settings"=>{"index.refresh_interval"=>"5s"}, "mappings"=>{"_default_"=>{"_all"=>{"enabled"=>true, "norms"=>false}, "dynamic_templates"=>[{"message_field"=>{"path_match"=>"message", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false}}}, {"string_fields"=>{"match"=>"*", "match_mapping_type"=>"string", "mapping"=>{"type"=>"text", "norms"=>false, "fields"=>{"keyword"=>{"type"=>"keyword"}}}}}], "properties"=>{"@timestamp"=>{"type"=>"date", "include_in_all"=>false}, "@version"=>{"type"=>"keyword", "include_in_all"=>false}, "geoip"=>{"dynamic"=>true, "properties"=>{"ip"=>{"type"=>"ip"}, "location"=>{"type"=>"geo_point"}, "latitude"=>{"type"=>"half_float"}, "longitude"=>{"type"=>"half_float"}}}}}}}}
+[2017-04-12T11:11:00,672][INFO ][logstash.outputs.elasticsearch] Installing elasticsearch template to _template/logstash
+[2017-04-12T11:11:00,916][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>[#<URI::Generic:0xba34f97 URL://elasticsearch:9200>]}
+[2017-04-12T11:11:01,078][INFO ][logstash.filters.geoip   ] Using geoip database {:path=>"/usr/share/logstash/vendor/bundle/jruby/1.9/gems/logstash-filter-geoip-4.0.4-java/vendor/GeoLite2-City.mmdb"}
+[2017-04-12T11:11:01,102][INFO ][logstash.pipeline        ] Starting pipeline {"id"=>"main", "pipeline.workers"=>2, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>250}
+[2017-04-12T11:11:01,120][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:5000"}
+[2017-04-12T11:11:01,127][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:6000"}
+[2017-04-12T11:11:01,142][INFO ][logstash.pipeline        ] Pipeline main started
+[2017-04-12T11:11:01,189][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
